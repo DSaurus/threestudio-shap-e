@@ -1,5 +1,5 @@
 # threestudio-shap-E
-Shap-E guidance extension of threestudio. Currently it is only used for initialization of Gaussian Splatting.
+Shap-E guidance extension of threestudio. The original implementation can be found in [https://github.com/openai/shap-e](https://github.com/openai/shap-e). Currently, it is only used for initialization of Gaussian Splatting.
 
 ## Installation
 ```
