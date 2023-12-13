@@ -1,1 +1,1 @@
-from .shap_E import Shap_E_Guidance
+from .shap_e import shap_e_Guidance
