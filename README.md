@@ -4,7 +4,7 @@ Shap-E guidance extension of threestudio. The original implementation can be fou
 ## Installation
 ```
 cd custom
-git clone https://github.com/DSaurus/threestudio-shap-E
+git clone https://github.com/DSaurus/threestudio-shap-e
 git clone https://github.com/openai/shap-e.git
 pip install -e shap-e
 ```
