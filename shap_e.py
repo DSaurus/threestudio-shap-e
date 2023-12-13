@@ -18,7 +18,7 @@ from threestudio.utils.typing import *
 
 
 @threestudio.register("shap-e-guidance")
-class Shap_E_Guidance(BaseObject):
+class shap_e_Guidance(BaseObject):
     @dataclass
     class Config(BaseObject.Config):
         model_name: str = "transmitter"
@@ -27,7 +27,7 @@ class Shap_E_Guidance(BaseObject):
         diff_config_name: str = "diffusion"
         guidance_scale: float = 15.0
         skip: int = 4
-        cache_dir: str = "custom/threestudio-shap-E/shap-e/cache"
+        cache_dir: str = "custom/threestudio-shap-e/shap-e/cache"
 
     cfg: Config
 
@@ -50,7 +50,7 @@ class Shap_E_Guidance(BaseObject):
         if os.path.exists(os.path.join(self.cfg.cache_dir, self.cfg.finetune_model_name)):
             model.load_state_dict(torch.load(os.path.join(self.cfg.cache_dir, self.cfg.finetune_model_name), map_location=device)['model_state_dict'])
         diffusion = diffusion_from_config_shape(load_config('diffusion', cache_dir=self.cfg.cache_dir))
-        threestudio.info(f"Loaded Multiview Diffusion!")
+        threestudio.info(f"Loaded shap-e guidance!")
 
         batch_size = 1
         guidance_scale = self.cfg.guidance_scale
